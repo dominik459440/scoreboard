@@ -13,8 +13,7 @@ public class GamesService {
 
     public Game startGame(Team homeTeam, Team awayTeam, LocalDateTime startTime) {
         Game game = Game.startGame(homeTeam, awayTeam, startTime);
-        gameRepository.saveGame(game);
-        return game;
+        return gameRepository.saveGame(game);
     }
 
     public Game finishGame(GameId gameId) {
